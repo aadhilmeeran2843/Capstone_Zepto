@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Zepto Automation Test Suite" parallel="tests" thread-count="2">
+    
+    <listeners>
+        <listener class-name="com.zepto.utilities.ExtentManager"/>
+        <listener class-name="com.zepto.utilities.TestListener"/>
+    </listeners>
+    
+    <parameter name="browser" value="chrome"/>
+    
+    <test name="Login Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zepto.tests.LoginTest"/>
+        </classes>
+    </test>
+    
+    <test name="Search Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zepto.tests.SearchTest"/>
+        </classes>
+    </test>
+    
+    <test name="SuperSaver Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zepto.tests.SuperSaverTest"/>
+        </classes>
+    </test>
+    
+    <test name="Cart Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zepto.tests.CartTest"/>
+        </classes>
+    </test>
+    
+    <test name="Address Test" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.zepto.tests.AddressTest"/>
+        </classes>
+    </test>
+    
+</suite>
