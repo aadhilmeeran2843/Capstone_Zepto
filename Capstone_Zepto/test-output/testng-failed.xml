@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Zepto Automation Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="com.zepto.utilities.ExtentManager"/>
+    <listener class-name="com.zepto.utilities.TestListener"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="Search Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.zepto.tests.SearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSearchProduct" invocation-numbers="2"/>
+          <include name="setUp"/>
+          <include name="ensureLogin"/>
+        </methods>
+      </class> <!-- com.zepto.tests.SearchTest -->
+    </classes>
+  </test> <!-- Search Test(failed) -->
+</suite> <!-- Failed suite [Zepto Automation Test Suite] -->
